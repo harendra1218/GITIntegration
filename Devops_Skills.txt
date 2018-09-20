@@ -1,0 +1,25 @@
+Skills Required :
+
+
+Dev-OPs, Build, Configuration Management(Build pipeline)	Understanding of Devops Pipeline from Testing Strategy point of view
+
+ Docker, container, Maven, Gradle, Kibana, Grafana dashboard, Jenkins, Slack , kubernetes , open stack, groovy/dsl, Puppet, Ansible, Log stash, Git stash
+
+
+
+Role: Site Reliability Engineer (SRE) / DevOps Engineer
+Responsibilities
+Ensure that the existing systems and services have operability features: replication, redundancy, failover, monitoring, metrics and alerts
+When systems and services deviate significantly away from normal levels, intervene and remediate
+Design and implement incident management system and procedures
+Design and implement operability features for new systems and services
+Continually review existing operability features and procedures and improve based on experience and feedback from stakeholders
+Continuous emphasis on automating operability procedures
+Qualifications
+Bachelor's degree in engineering
+At least 2 years of experience in operating medium-scale distributed system in a cloud environment
+Experience in build and deployment automation using a scripting language
+Well versed in Unix operating system
+Critical ability to find gaps in operating procedures and bridging them
+Ability to zero in on the root cause of problems and come up with remediation
+Experience in deploying software built using Agile methodologies including Continuous Integration

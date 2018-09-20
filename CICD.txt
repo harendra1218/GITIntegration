@@ -1,0 +1,142 @@
+13.232.101.76
+
+[root@ip-172-31-27-134 ec2-user]# docker -v
+Docker version 18.06.1-ce, build e68fc7a
+
+
+
+
+[root@ip-172-31-27-134 ec2-user]# docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+d1725b59e92d: Pull complete
+Digest: sha256:0add3ace90ecb4adbf7777e9aacf18357296e799f81cabc9fde470971e499788
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[root@ip-172-31-27-134 ec2-user]#
+
+
+
+
+
+[root@ip-172-31-27-134 ~]# docker pull cptactionhank/atlassian-jira
+
+
+[root@ip-172-31-27-134 ~]# docker images
+
+
+
+Jira
+========================================================================
+
+docker run --detach --publish 8085:8080 cptactionhank/atlassian-jira:latest (Here we have changed the port no. for jira from 8080 to 8085)
+
+
+docker ps ---> which are processes running on the docker
+
+
+[root@ip-172-31-27-134 ~]# docker ps
+CONTAINER ID        IMAGE                                 COMMAND                  CREATED              STATUS              PORTS                    NAMES
+40103a03841b        cptactionhank/atlassian-jira:latest   "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8085->8080/tcp   condescending_volhard
+[root@ip-172-31-27-134 ~]
+
+This means Jira is running in the container now.
+
+To quickly get started running a JIRA Core instance, use the following command:
+
+docker run --detach --publish 8080:8080 cptactionhank/atlassian-jira:latest
+Then simply navigate your preferred browser to http://[dockerhost]:8085 and finish the configuration.
+
+13.232.101.76:8085
+
+
+
+Jira credentials
+
+email- reply2hky@gmail.com
+Userid: harendra1218
+Password: admin1234
+
+
+
+13.126.16.228:8085
+
+
+Sonarqube
+=================================
+
+docker pull sonarqube
+
+docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+
+13.126.16.228:9000  to access
+
+
+Now we need few elemts
+
+Sonarqube server --Done
+Source code
+Scanner
+
+
+
+
+Code review
+
+Maven- Build management
+
+mvn compile
+mvn test
+mvn package
+mvn deploy
+
+
+
+
+Nexus
+================================================
+
+docker pull sonatype/nexus
+
+docker run -d -p 8081:8081 --name nexus sonatype/nexus:oss
+13.126.16.228:8081/nexus/
+
+http://13.126.16.228:8081/nexus/#welcome
+
+
+Now you need to create the repositories in the nexus
+
+take the YRl for both the Release & snapshot repository
+
+& add that in Pom.xml in order to link maven with Artifact
+
+
+
+JiRA --> GIT ---> jenkins --> sonarqube 
+
+
+02:49
+
+
+
